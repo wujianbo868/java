@@ -1,0 +1,6 @@
+spring:
+  cache:
+    #缓存名称
+    cache-names: guavaDemo
+    #缓存最大数量500条, 缓存失效时间 6个小时
+    guava.spec: maximumSize=500,expireAfterWrite=360m
