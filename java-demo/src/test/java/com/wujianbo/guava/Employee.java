@@ -2,10 +2,12 @@ package com.wujianbo.guava;
 
 import com.google.common.base.MoreObjects;
 
+import java.io.Serializable;
+
 /**
  * Created by wujianbo on 2018/5/4.
  */
-public class Employee {
+public class Employee implements Serializable {
 
     String name;
     String dept;

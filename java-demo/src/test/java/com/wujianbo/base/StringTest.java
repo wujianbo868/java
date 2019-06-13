@@ -17,5 +17,7 @@ public class StringTest {
         List<String> strings = Arrays.asList("haha","lolo");
         String listFormat = String.join("\n",strings);
         System.out.println(listFormat);
+        String foo = "wujianbo";
+        System.out.println(foo.hashCode());
     }
 }

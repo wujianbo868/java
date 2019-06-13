@@ -2,9 +2,7 @@ package com.wujianbo.lamda;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.IntSummaryStatistics;
-import java.util.List;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -26,7 +24,15 @@ public class LamdaTest {
         // 使用Java 8的方法引用更方便，方法引用由::双冒号操作符标示，
         // 看起来像C++的作用域解析运算符
         features.forEach(System.out::println);
+        Map<String, Object> infoMap = new HashMap<>();
+        infoMap.put("name", "Zebe");
+        infoMap.put("site", "www.zebe.me");
+        infoMap.put("email", "zebe@vip.qq.com");
+        infoMap.forEach((key, value) -> {
+            System.out.println(key + "：" + value);
+        });
     }
+
 
     @Test
     public void testPredicate(){

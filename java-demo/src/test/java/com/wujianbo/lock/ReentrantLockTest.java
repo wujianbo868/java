@@ -16,14 +16,14 @@ public class ReentrantLockTest {
 
         public void get(){
             lock.lock();
-            System.out.println(Thread.currentThread().getId());
+            System.out.println("get:"+Thread.currentThread().getId());
             set();
             lock.unlock();
         }
 
         public void set(){
             lock.lock();
-            System.out.println(Thread.currentThread().getId());
+            System.out.println("set:"+Thread.currentThread().getId());
             lock.unlock();
         }
 
@@ -36,6 +36,15 @@ public class ReentrantLockTest {
     @org.junit.Test
     public void testThread(){
         Test ss = new Test();
+        new Thread(ss).start();
+        new Thread(ss).start();
+        new Thread(ss).start();
+        new Thread(ss).start();
+        new Thread(ss).start();
+        new Thread(ss).start();
+        new Thread(ss).start();
+        new Thread(ss).start();
+        new Thread(ss).start();
         new Thread(ss).start();
         new Thread(ss).start();
         new Thread(ss).start();
